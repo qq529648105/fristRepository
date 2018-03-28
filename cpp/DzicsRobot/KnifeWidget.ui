@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KnifeWidget</class>
+ <widget class="QWidget" name="KnifeWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1256</width>
+    <height>841</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>6</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="accessibleName">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>刀补修改</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>刀具磨损</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QWidget" name="widget_4" native="true">
+               <property name="maximumSize">
+                <size>
+                 <width>180</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <widget class="QLabel" name="label_5">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>20</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>类型 T     D</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_12">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>120</y>
+                  <width>21</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_16">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>270</y>
+                  <width>21</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_14">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>170</y>
+                  <width>21</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_13">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>120</y>
+                  <width>21</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_15">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>220</y>
+                  <width>21</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>3</string>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_6" native="true">
+               <property name="maximumSize">
+                <size>
+                 <width>180</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <widget class="QLabel" name="label_9">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>70</y>
+                  <width>111</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>长度X(mm)</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit1">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>120</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit7">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>220</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit10">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>270</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit4">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>170</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_7" native="true">
+               <property name="maximumSize">
+                <size>
+                 <width>180</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <widget class="QLineEdit" name="Edit11">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>270</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit2">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>120</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_8">
+                <property name="geometry">
+                 <rect>
+                  <x>70</x>
+                  <y>20</y>
+                  <width>71</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>磨损</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit5">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>170</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_10">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>70</y>
+                  <width>111</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>长度Z(mm)</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit8">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>220</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_5" native="true">
+               <property name="maximumSize">
+                <size>
+                 <width>200</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <widget class="QLineEdit" name="Edit12">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>270</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit3">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>120</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit9">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>220</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_11">
+                <property name="geometry">
+                 <rect>
+                  <x>30</x>
+                  <y>70</y>
+                  <width>161</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>半径(mm)</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="Edit6">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>170</y>
+                  <width>151</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>500</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <widget class="QPushButton" name="pushButton_4">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>410</y>
+               <width>261</width>
+               <height>71</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>写入磨损数据</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>261</width>
+               <height>91</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>连接CNC</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="comboBox_3">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>170</y>
+               <width>171</width>
+               <height>31</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_20">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>310</y>
+               <width>71</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>修改值</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="comboBox_2">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>120</y>
+               <width>171</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>精外北</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>北外南</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镗孔</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>止口</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QLabel" name="label_18">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>170</y>
+               <width>71</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>刀</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="value">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>340</y>
+               <width>271</width>
+               <height>31</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_21">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>370</y>
+               <width>271</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>注：范围-9.999~+9.999</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_19">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>270</y>
+               <width>71</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>磨损</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_17">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>61</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>机床</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="comboBox_4">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>220</y>
+               <width>171</width>
+               <height>31</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_22">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>220</y>
+               <width>71</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>刀沿D</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="comboBox_5">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>270</y>
+               <width>171</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>X</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Z</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>R</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Y</string>
+              </property>
+             </item>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>150</height>
+          </size>
+         </property>
+         <widget class="QLabel" name="label_50">
+          <property name="geometry">
+           <rect>
+            <x>13</x>
+            <y>13</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>实时信息</string>
+          </property>
+         </widget>
+         <widget class="QListView" name="listView">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>1131</width>
+            <height>124</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>140</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>机床刀具磨损</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTableWidget" name="KniInfoWidget">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;宋体&quot;;
+</string>
+         </property>
+         <column>
+          <property name="text">
+           <string>主键</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>别名</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>机床</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>刀具</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>刀沿</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>长度X(mm)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>长度Z(mm)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>半径R(mm)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>偏置Y(mm)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>预留1</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>预留2</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>预留3</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>导入</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="text">
+               <string>导出</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>机床开关</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTableWidget" name="KniInfoWidget2">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <column>
+          <property name="text">
+           <string>id</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>parId</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>开关</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>机器人变量</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>磨损方向</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>设备类型</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>设定值</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>测量值</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>偏差值</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>正负</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>刀补值</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>探针值</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>绑定机床</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_23">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>刀具信息</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>数据发送</string>
+      </attribute>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>70</y>
+         <width>112</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>修改刀补</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>70</y>
+         <width>251</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>80</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>27</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

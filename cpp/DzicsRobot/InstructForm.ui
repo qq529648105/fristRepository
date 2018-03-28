@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InstructForm</class>
+ <widget class="QWidget" name="InstructForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>858</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLineEdit" name="lineEdit_find">
+   <property name="geometry">
+    <rect>
+     <x>51</x>
+     <y>10</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear">
+   <property name="geometry">
+    <rect>
+     <x>612</x>
+     <y>9</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>36</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查找：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>38</y>
+     <width>36</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>替换：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_replace">
+   <property name="geometry">
+    <rect>
+     <x>51</x>
+     <y>39</y>
+     <width>133</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_replace">
+   <property name="geometry">
+    <rect>
+     <x>612</x>
+     <y>38</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>替换</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_replaceall">
+   <property name="geometry">
+    <rect>
+     <x>693</x>
+     <y>38</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>替换所有</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="instructTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>67</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="plainText">
+    <string>wwwwwwwwwww
+sssssssHHS,FKK
+SMMO,D
+CCC.
+XXX
+cxsddddd
+dekrjejrr.cxsfffff
+sesrsr
+ssffffffffff
+
+ssffffwqi43784fjoa'WWW
+
+dddf,cxsjdumoc
+
+sswueyds.'dsdddd
+
+fdfnoiyq8	x37	-
+
+dskafj98adl;pd.cxs
+
+dasjkrjheiure
+
+sdsoei9reu8uwe
+qqqqqqqqqqqqqqqqq
+ss
+
+c,cxs
+
+
+swjeyhew</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_forward">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>9</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_back">
+   <property name="geometry">
+    <rect>
+     <x>693</x>
+     <y>9</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;-</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

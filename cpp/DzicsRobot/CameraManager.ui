@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CameraManager</class>
+ <widget class="QDialog" name="CameraManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1105</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="ButtonUpdate">
+     <property name="text">
+      <string>确认修改</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="ButtonDel">
+     <property name="text">
+      <string>删除相机</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="ButtonAdd">
+     <property name="text">
+      <string>增加相机</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" rowspan="4">
+    <widget class="QTableWidget" name="tableWidgetCamera">
+     <column>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>相机名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>自动曝光</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>相机型号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>最大曝光值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>最小曝光值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>最大增益值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>最小增益值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>相机宽度</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>相机高度</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>拍照数量</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>间隔</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
