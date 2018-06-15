@@ -295,7 +295,7 @@
         </size>
        </property>
        <property name="text">
-        <string>splitHSV</string>
+        <string>splitHSV归一化</string>
        </property>
       </widget>
      </item>
@@ -322,13 +322,6 @@
        </property>
        <property name="text">
         <string>白色背景布料</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="6">
-      <widget class="QPushButton" name="pushButton_106">
-       <property name="text">
-        <string>splitRGBVal</string>
        </property>
       </widget>
      </item>
@@ -371,19 +364,6 @@
        </property>
       </widget>
      </item>
-     <item row="8" column="5">
-      <widget class="QPushButton" name="pushButton_107">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>splitRGB</string>
-       </property>
-      </widget>
-     </item>
      <item row="13" column="4">
       <widget class="QPushButton" name="pushButton_88">
        <property name="minimumSize">
@@ -399,6 +379,12 @@
      </item>
      <item row="14" column="5">
       <widget class="QPushButton" name="pushButton_109">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>振挺D线ZDK</string>
        </property>
@@ -419,6 +405,12 @@
      </item>
      <item row="19" column="6">
       <widget class="QPushButton" name="pushButton_113">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>雪龙异物</string>
        </property>
@@ -608,6 +600,12 @@
      </item>
      <item row="10" column="5">
       <widget class="QPushButton" name="pushButton_103">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="baseSize">
         <size>
          <width>0</width>
@@ -738,6 +736,12 @@
      </item>
      <item row="8" column="0">
       <widget class="QPushButton" name="pushButton_98">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>外接矩形白帽</string>
        </property>
@@ -1172,19 +1176,6 @@
        </property>
       </widget>
      </item>
-     <item row="19" column="4">
-      <widget class="QPushButton" name="pushButton_97">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>间隙检测</string>
-       </property>
-      </widget>
-     </item>
      <item row="20" column="3">
       <widget class="QPushButton" name="pushButton_66">
        <property name="minimumSize">
@@ -1239,6 +1230,12 @@
      </item>
      <item row="17" column="1">
       <widget class="QPushButton" name="pushButton_102">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="baseSize">
         <size>
          <width>0</width>
@@ -1317,6 +1314,18 @@
      </item>
      <item row="2" column="5">
       <widget class="QPushButton" name="pushButton_105">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>saveThresh</string>
        </property>
@@ -1415,6 +1424,12 @@
      </item>
      <item row="13" column="7">
       <widget class="QPushButton" name="pushButton_111">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>振挺QC模板</string>
        </property>
@@ -1448,6 +1463,12 @@
      </item>
      <item row="16" column="1">
       <widget class="QPushButton" name="pushButton_112">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>振挺I线Δ</string>
        </property>
@@ -1494,6 +1515,12 @@
      </item>
      <item row="14" column="7">
       <widget class="QPushButton" name="pushButton_110">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="text">
         <string>振挺QC_loop</string>
        </property>
@@ -1730,6 +1757,77 @@
        </property>
        <property name="text">
         <string>振挺M线</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="7">
+      <widget class="QPushButton" name="pushButton_106">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>splitRGBVal</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="6">
+      <widget class="QPushButton" name="pushButton_107">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>splitRGB</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="5">
+      <widget class="QPushButton" name="pushButton_135">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>HSV</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="6">
+      <widget class="QPushButton" name="pushButton_97">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>间隙检测</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="4">
+      <widget class="QPushButton" name="pushButton_136">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>雪龙圆孔RGB</string>
        </property>
       </widget>
      </item>

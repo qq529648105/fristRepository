@@ -53,5 +53,6 @@ private:
     std::vector<std::vector<double>> tempDisArr;
     std::vector<std::vector<double>> tempDisArr2;
 
+
 };
 #endif // PROJECT3_H

@@ -24,4 +24,5 @@ extern IplImage *armImg;
 extern int mousePosX;
 extern int mousePosY;
 extern Point contourP1;
+extern bool hsvFg;
 #endif // GLOBAL_H

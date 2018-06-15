@@ -1792,6 +1792,224 @@ void project1::xl_circle3(Mat &rgb,Mat& img1,Rect roi,int &num,int &num2,xy_size
 
 }
 
+void project1::xl_circle4(Mat &rgb,Mat& img1,Rect roi,int &num,int &num2,xy_size_1 xy_arr[], int,params &param)
+{
+    Point center(param.var1[0]-roi.x,param.var1[1]-roi.y);//圆心
+    Point robotCen(param.var1[2]-roi.x,param.var1[3]-roi.y);//机器人基准点
+    int minSize=param.var1[4];//圆孔size
+    int maxSize=param.var1[5];//圆孔size
+    int c_size3=param.var1[6];//找圆心需要的size
+    int minDistance=param.var1[7];//圆孔离圆心距离
+    int maxDistance=param.var1[8];//圆孔离圆心距离
+
+    int thresh=param.var1[9];//二值参数
+    int step=param.var1[10];//毛刺step
+    int b=param.var1[11];//RGB
+    int g=param.var1[12];
+    int r=param.var1[13];
+    int rgbDif=param.var1[14];//rgb范围
+
+    double pixelRatio=param.var2[0];//像素比
+    double rectDifVal=param.var2[1];//圆外接矩形长宽比
+    double angle2=param.var2[2];//坐标角度偏差
+    double offsetX=param.var2[3];//X偏移毫米
+    double offsetY=param.var2[4];//Y偏移毫米
+
+
+    int j1=0;
+    int distance,len1,len2;
+    int cenX=center.x;
+    int cenY=center.y;
+    int x1,y1,shape_size;
+    Point calibratePoint;
+
+    xy_size detectedCircleList[100];
+
+
+    Mat img=img1(roi);
+
+
+    Mat mask(img.rows,img.cols,CV_8UC1,Scalar(0));
+    for(int i=0;i<img.rows;i++)
+    {
+        for(int j=0;j<img.cols;j++)
+        {
+
+            if(abs(img.at<Vec3b>(i,j)[0]-r)+ abs(img.at<Vec3b>(i,j)[1]-g)+ abs(img.at<Vec3b>(i,j)[2]-b)<rgbDif)
+            {
+
+                mask.at<uchar>(i,j)=255;
+            }
+        }
+    }
+
+    //start -------------------------------------------------------------------------------------
+
+
+    //threshold(img,img,thresh,255,THRESH_BINARY);
+    std::vector<std::vector<Point>> contours;
+
+     findContours(mask,
+                  contours, // a vector of contours
+                  CV_RETR_TREE, // retrieve the external contours
+                  CV_CHAIN_APPROX_NONE); // retrieve all pixels of each contours
+
+     // Print contours' length
+     //std::cout << "Contours: " << contours.size() << std::endl;
+     std::vector<std::vector<cv::Point>>::const_iterator itContours= contours.begin();
+     RotatedRect     End_Rage2D1;
+     CvPoint2D32f rectpoint[4];
+
+//     for (unsigned int k=0 ; k<contours.size(); k++)
+//     {
+
+//         if(contours[k].size()>c_size3-100&&contours[k].size()<c_size3+150)
+//         {
+//             End_Rage2D1 = minAreaRect(Mat(contours[k]));
+//             cvBoxPoints(End_Rage2D1,rectpoint);
+//             cenX=End_Rage2D1.center.x;
+//             cenY=End_Rage2D1.center.y;
+//             qDebug()<<"cen"<<cenX<<cenY;
+//         }
+//     }
+     qDebug()<<"size:"<<contours.size();
+     for (unsigned int k=0 ; k<contours.size(); k++)
+     {
+         if(contours[k].size()<minSize||contours[k].size()>maxSize)
+             continue;
+         End_Rage2D1 = minAreaRect(Mat(contours[k]));
+         cvBoxPoints(End_Rage2D1,rectpoint);
+
+         x1=End_Rage2D1.center.x;
+         y1=End_Rage2D1.center.y;
+
+
+
+        distance=common::getLineLen(Point(x1,y1),Point(cenX,cenY));
+
+        if(distance<minDistance||distance>maxDistance)
+            continue;
+
+
+        xy_size curObj;
+        curObj.calcCen=false;
+        curObj.x=x1;
+        curObj.y=y1;
+        curObj.size=contours[k].size();
+        curObj.p1=contours[k];
+
+
+        len1=common::getLineLen(rectpoint[0],rectpoint[1]);
+        len2=common::getLineLen(rectpoint[1],rectpoint[2]);
+
+        if(len1>len2)
+        {
+            len1^=len2;
+            len2^=len1;
+            len1^=len2;
+
+        }
+
+
+        if(len2*1.0/len1<rectDifVal)
+        {
+            curObj.calcCen=true;
+
+        }
+
+        detectedCircleList[num++]=curObj;
+
+
+         //QString words=QString("%1").arg(End_Rage2D1.angle);
+        // putText( m2, words.toStdString(), Point(End_Rage2D1.center.x-10,End_Rage2D1.center.y),CV_FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255),2 );
+        // std::cout << "Size: " << contours[k].size()<<" angle:"<<End_Rage2D1.angle << std::endl;
+     }
+
+     //--------------------------------------------------------------end
+
+
+
+     sortCircle(detectedCircleList,num,cenX,cenY);
+
+
+
+
+
+
+//qDebug()<<"yyyyy"<<detectedCircleList[4].p1[120].x;
+     for(int k=0;k<num;k++)
+     {
+
+         x1=detectedCircleList[k].x;
+         y1=detectedCircleList[k].y;
+
+         shape_size=detectedCircleList[k].size;
+
+         if(j1<50)//去毛刺圆孔,j1(下标)
+         {
+
+             xy_arr[j1].x=x1;
+             xy_arr[j1].y=y1;
+             xy_arr[j1].size=shape_size;
+
+             xy_arr[j1].calcCen=detectedCircleList[k].calcCen;
+
+             if(DEBUG)
+             {
+                 circle( rgb,Point(x1+roi.x,y1+roi.y), 35, Scalar(0,0,255), 3, CV_AA);
+             }
+
+             Point p1,p2,p3,pCen,pPre;
+             bool success;
+             if(xy_arr[j1].calcCen)
+             {
+
+                 for(int i=step;i<shape_size-step;i+=step)
+                 {
+
+                     p1.x=detectedCircleList[k].p1[i-step].x;
+                     p1.y=detectedCircleList[k].p1[i-step].y;
+                     p2.x=detectedCircleList[k].p1[i].x;
+                     p2.y=detectedCircleList[k].p1[i].y;
+                     p3.x=detectedCircleList[k].p1[i+step].x;
+                     p3.y=detectedCircleList[k].p1[i+step].y;
+
+
+
+
+                     success=common::getCircleCenter(p1,p2,p3,pCen);
+
+                     if(abs(pCen.x-pPre.x)<4&&abs(pCen.y-pPre.y)<4&&success)
+                     {
+                          //qDebug()<<"i:"<<i<<"pCen1111"<<xy_arr[j1].x<<xy_arr[j1].y<<pCen.x<<pCen.y;
+                          xy_arr[j1].x=pCen.x;
+                          xy_arr[j1].y=pCen.y;
+
+                          break;
+                     }
+                     pPre=pCen;
+
+                 }
+             }
+
+
+             calibratePoint=common::xyCalibration(angle2,robotCen,Point(x1,y1));
+
+
+             xy_arr[j1].moveX=(calibratePoint.x-robotCen.x)*pixelRatio+offsetX;
+             xy_arr[j1].moveY=(calibratePoint.y-robotCen.y)*pixelRatio+offsetY;
+
+             j1++;
+         }
+     }
+
+
+   num2=j1;
+
+
+
+}
+
 
 void project1::xl_blackObj(Mat &src,Mat &rgb,  Rect roi, params &param)
 {

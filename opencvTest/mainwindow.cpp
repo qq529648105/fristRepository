@@ -4226,8 +4226,8 @@ medianBlur(g_dstImage1, g_dstImage3,medianBlurVal);
 
 void MainWindow::on_pushButton_99_clicked()
 {
-
-
+//归一化
+    hsvFg=true;
     btnNext=ui->pushButton_99;
     string s1=ui->comboBox->currentText().toLocal8Bit();
     g_dstImage1=imread(s1,0);
@@ -4238,6 +4238,20 @@ void MainWindow::on_pushButton_99_clicked()
     pro3->rgbPic(image,1);
 
 }
+
+void MainWindow::on_pushButton_135_clicked()
+{
+    hsvFg=false;
+    btnNext=ui->pushButton_135;
+    string s1=ui->comboBox->currentText().toLocal8Bit();
+    g_dstImage1=imread(s1,0);
+    g_dstImage2=imread(s1,1);
+
+
+    IplImage *image=cvLoadImage(ui->comboBox->currentText().toLocal8Bit().data());//打开图像源图像
+    pro3->rgbPic(image,1);
+}
+
 
 void MainWindow::on_pushButton_100_clicked()
 {
@@ -4336,14 +4350,48 @@ void MainWindow::on_pushButton_105_clicked()
     threshold(g_dstImage1,img1,198,255,THRESH_BINARY);
     imwrite("image/temp1.png",img1);
 }
+int rgbDif=30;
+int rgb_b,rgb_g,rgb_r;
 
+void callBackRGB(int,void*)
+{
+    int b=rgb_r;
+    int g=rgb_g;
+    int r=rgb_b;
+    Mat rgb=g_dstImage2;
+
+    Mat mask(rgb.rows,rgb.cols,CV_8UC1,Scalar(0));
+    for(int i=0;i<rgb.rows;i++)
+    {
+        for(int j=0;j<rgb.cols;j++)
+        {
+
+            if(abs(rgb.at<Vec3b>(i,j)[0]-r)+ abs(rgb.at<Vec3b>(i,j)[1]-g)+ abs(rgb.at<Vec3b>(i,j)[2]-b)<rgbDif)
+            {
+//                rgb.at<Vec3b>(i,j)[0]=0;
+//                rgb.at<Vec3b>(i,j)[1]=0;
+//                rgb.at<Vec3b>(i,j)[2]=0;
+                mask.at<uchar>(i,j)=255;
+            }
+        }
+    }
+
+    imshow("rgbShow",mask);
+}
 
 
 void MainWindow::on_pushButton_106_clicked()
 {
     string s1=ui->comboBox->currentText().toLocal8Bit();
     g_dstImage2=imread(s1,1);
-    pro3->splitRGB(g_dstImage2);
+    namedWindow("rgbShow", WINDOW_NORMAL);
+    //调节色相 H
+    createTrackbar("val", "rgbShow", &rgbDif, 255*3, callBackRGB);
+    createTrackbar("R", "rgbShow", &rgb_r, 255, callBackRGB);
+    createTrackbar("G", "rgbShow", &rgb_g, 255, callBackRGB);
+    createTrackbar("B", "rgbShow", &rgb_b, 255, callBackRGB);
+    callBackRGB(0,0);
+    //pro3->splitRGB(g_dstImage2);
 }
 
 void MainWindow::on_pushButton_107_clicked()
@@ -4548,4 +4596,86 @@ void MainWindow::on_pushButton_134_clicked()
 
 
         paramRet=param.var2[19];
+}
+
+
+
+void MainWindow::on_pushButton_136_clicked()
+{
+
+    btnNext=ui->pushButton_136;
+    string s1=ui->comboBox->currentText().toLocal8Bit();
+//    Mat img_1 = imread(s1, 0);
+//    Mat img=img_1(Rect(840,832,668,607));
+
+     g_dstImage1=imread(s1,0);
+     g_dstImage2=imread(s1,1);
+
+    xy_size_1 xy_arr[50];
+    int otherNum=0;
+
+    //雪龙6种圆环尺寸 76  86  125  127  164  180
+
+    //三维视觉参数
+    //170,360,4519,400,717,20,530,372,246,596,1193,959,1259,953,190,160,90,0.16014,0.14,-0.95788,0,0
+    //993,5,0,0,150,360,0,434,494,100,25,154,191,147,40,1,1.4,0,0,0
+    params param;
+    param.var1[0]=993;//圆心
+    param.var1[1]=5;
+    param.var1[2]=0;
+    param.var1[3]=0;//机器人基准点
+    param.var1[4]=150;//圆孔size
+    param.var1[5]=360;//圆孔size
+    param.var1[6]=0;//找圆心需要的size
+    param.var1[7]=434;//圆孔离圆心距离
+    param.var1[8]=494;//圆孔离圆心距离
+
+    param.var1[9]=100;//二值参数
+    param.var1[10]=25;//毛刺step
+    param.var1[11]=154;//RGB
+    param.var1[12]=191;
+    param.var1[13]=147;
+    param.var1[14]=40;//rgb范围
+
+    param.var2[0]=1;//像素比
+    param.var2[1]=1.4;//圆外接矩形长宽比
+    param.var2[2]=0;//坐标角度偏差
+    param.var2[3]=0;//X偏移毫米
+    param.var2[4]=0;//Y偏移毫米
+
+
+
+
+    int num=0,num2=0;
+    QTime t;
+    t.start();
+    //Rect roi(1000,750,1000,1000);
+    Rect roi(0,0,g_dstImage1.cols,g_dstImage1.rows);
+
+    medianBlur(g_dstImage2, g_dstImage2, 9);
+    if(ui->checkBox_dll->isChecked())
+    {
+        xl_circle(g_dstImage2,roi,num,num2,xy_arr,otherNum,param);
+    }
+    else
+    {
+        pro1->xl_circle4(g_dstImage2,g_dstImage2,roi,num,num2,xy_arr,otherNum,param);
+    }
+
+    qDebug("Time elapsed: %d ms", t.elapsed());
+    QString str;
+
+    qDebug()<<"数量:"<<num<<"NG"<<num2<<"污点数量"<<otherNum;
+    for(int i=0;i<num2;i++)
+    {
+        qDebug()<<"x:"<<xy_arr[i].x<<"y:"<<xy_arr[i].y<<"size:"<<xy_arr[i].size;
+        str+=QString("%1,%2|").arg(QString::number(xy_arr[i].moveY*-1,'f',3)).arg(QString::number(xy_arr[i].moveX*-1,'f',3));
+
+    }
+
+    str.remove(str.length()-1,1);
+    qDebug()<<"move:"<<str;
+    namedWindow("rgb",0);
+    resizeWindow("rgb",800,600);
+    imshow("rgb",g_dstImage2);
 }

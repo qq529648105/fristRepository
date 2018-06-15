@@ -20,6 +20,8 @@ public slots:
     int zt_1stLine(Mat &m5,Point &p,float &angle);
     int calcWork(Mat img,Point &p,float &angle,int c1=603,int c2=623);
     void xl_circle3(Mat& rgb,Mat& img1,Rect roi,int &num,int &num2,xy_size_1 xy_arr[], int,params &param);
+
+    void xl_circle4(Mat& rgb,Mat& img1,Rect roi,int &num,int &num2,xy_size_1 xy_arr[], int,params &param);
     void xl_blackObj(Mat& src,Mat& rgb,Rect roi,params &param);
     void zt_calcWork_6(Mat &m3,Rect roi,params& param,double &angle);
     void calcMeter(Mat& img,Rect rect,bool& NG,int &offX,int &offY,params param);

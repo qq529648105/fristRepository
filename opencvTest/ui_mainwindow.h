@@ -54,11 +54,9 @@ public:
     QPushButton *pushButton_99;
     QPushButton *pushButton_12;
     QPushButton *pushButton_95;
-    QPushButton *pushButton_106;
     QPushButton *pushButton_63;
     QPushButton *pushButton_90;
     QPushButton *pushButton_89;
-    QPushButton *pushButton_107;
     QPushButton *pushButton_88;
     QPushButton *pushButton_109;
     QPushButton *pushButton_13;
@@ -121,7 +119,6 @@ public:
     QPushButton *pushButton_84;
     QPushButton *pushButton_40;
     QPushButton *pushButton_60;
-    QPushButton *pushButton_97;
     QPushButton *pushButton_66;
     QPushButton *pushButton_21;
     QPushButton *pushButton_65;
@@ -166,6 +163,11 @@ public:
     QPushButton *pushButton_132;
     QPushButton *pushButton_133;
     QPushButton *pushButton_134;
+    QPushButton *pushButton_106;
+    QPushButton *pushButton_107;
+    QPushButton *pushButton_135;
+    QPushButton *pushButton_97;
+    QPushButton *pushButton_136;
     QPushButton *pushButton_29;
     QLabel *label;
     QPushButton *pushButton_62;
@@ -319,11 +321,6 @@ public:
 
         gridLayout->addWidget(pushButton_95, 10, 4, 1, 1);
 
-        pushButton_106 = new QPushButton(layoutWidget);
-        pushButton_106->setObjectName(QString::fromUtf8("pushButton_106"));
-
-        gridLayout->addWidget(pushButton_106, 8, 6, 1, 1);
-
         pushButton_63 = new QPushButton(layoutWidget);
         pushButton_63->setObjectName(QString::fromUtf8("pushButton_63"));
         pushButton_63->setMinimumSize(QSize(0, 30));
@@ -342,12 +339,6 @@ public:
 
         gridLayout->addWidget(pushButton_89, 13, 5, 1, 1);
 
-        pushButton_107 = new QPushButton(layoutWidget);
-        pushButton_107->setObjectName(QString::fromUtf8("pushButton_107"));
-        pushButton_107->setMinimumSize(QSize(0, 30));
-
-        gridLayout->addWidget(pushButton_107, 8, 5, 1, 1);
-
         pushButton_88 = new QPushButton(layoutWidget);
         pushButton_88->setObjectName(QString::fromUtf8("pushButton_88"));
         pushButton_88->setMinimumSize(QSize(0, 30));
@@ -356,6 +347,7 @@ public:
 
         pushButton_109 = new QPushButton(layoutWidget);
         pushButton_109->setObjectName(QString::fromUtf8("pushButton_109"));
+        pushButton_109->setMinimumSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_109, 14, 5, 1, 1);
 
@@ -367,6 +359,7 @@ public:
 
         pushButton_113 = new QPushButton(layoutWidget);
         pushButton_113->setObjectName(QString::fromUtf8("pushButton_113"));
+        pushButton_113->setMinimumSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_113, 19, 6, 1, 1);
 
@@ -456,6 +449,7 @@ public:
 
         pushButton_103 = new QPushButton(layoutWidget);
         pushButton_103->setObjectName(QString::fromUtf8("pushButton_103"));
+        pushButton_103->setMinimumSize(QSize(0, 30));
         pushButton_103->setBaseSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_103, 10, 5, 1, 1);
@@ -516,6 +510,7 @@ public:
 
         pushButton_98 = new QPushButton(layoutWidget);
         pushButton_98->setObjectName(QString::fromUtf8("pushButton_98"));
+        pushButton_98->setMinimumSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_98, 8, 0, 1, 1);
 
@@ -717,12 +712,6 @@ public:
 
         gridLayout->addWidget(pushButton_60, 7, 2, 1, 1);
 
-        pushButton_97 = new QPushButton(layoutWidget);
-        pushButton_97->setObjectName(QString::fromUtf8("pushButton_97"));
-        pushButton_97->setMinimumSize(QSize(0, 30));
-
-        gridLayout->addWidget(pushButton_97, 19, 4, 1, 1);
-
         pushButton_66 = new QPushButton(layoutWidget);
         pushButton_66->setObjectName(QString::fromUtf8("pushButton_66"));
         pushButton_66->setMinimumSize(QSize(0, 30));
@@ -749,6 +738,7 @@ public:
 
         pushButton_102 = new QPushButton(layoutWidget);
         pushButton_102->setObjectName(QString::fromUtf8("pushButton_102"));
+        pushButton_102->setMinimumSize(QSize(0, 30));
         pushButton_102->setBaseSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_102, 17, 1, 1, 1);
@@ -785,6 +775,8 @@ public:
 
         pushButton_105 = new QPushButton(layoutWidget);
         pushButton_105->setObjectName(QString::fromUtf8("pushButton_105"));
+        pushButton_105->setMinimumSize(QSize(0, 30));
+        pushButton_105->setBaseSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_105, 2, 5, 1, 1);
 
@@ -832,6 +824,7 @@ public:
 
         pushButton_111 = new QPushButton(layoutWidget);
         pushButton_111->setObjectName(QString::fromUtf8("pushButton_111"));
+        pushButton_111->setMinimumSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_111, 13, 7, 1, 1);
 
@@ -849,6 +842,7 @@ public:
 
         pushButton_112 = new QPushButton(layoutWidget);
         pushButton_112->setObjectName(QString::fromUtf8("pushButton_112"));
+        pushButton_112->setMinimumSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_112, 16, 1, 1, 1);
 
@@ -872,6 +866,7 @@ public:
 
         pushButton_110 = new QPushButton(layoutWidget);
         pushButton_110->setObjectName(QString::fromUtf8("pushButton_110"));
+        pushButton_110->setMinimumSize(QSize(0, 30));
 
         gridLayout->addWidget(pushButton_110, 14, 7, 1, 1);
 
@@ -983,6 +978,37 @@ public:
 
         gridLayout->addWidget(pushButton_134, 20, 7, 1, 1);
 
+        pushButton_106 = new QPushButton(layoutWidget);
+        pushButton_106->setObjectName(QString::fromUtf8("pushButton_106"));
+        pushButton_106->setMinimumSize(QSize(0, 30));
+        pushButton_106->setBaseSize(QSize(0, 0));
+
+        gridLayout->addWidget(pushButton_106, 8, 7, 1, 1);
+
+        pushButton_107 = new QPushButton(layoutWidget);
+        pushButton_107->setObjectName(QString::fromUtf8("pushButton_107"));
+        pushButton_107->setMinimumSize(QSize(0, 30));
+
+        gridLayout->addWidget(pushButton_107, 8, 6, 1, 1);
+
+        pushButton_135 = new QPushButton(layoutWidget);
+        pushButton_135->setObjectName(QString::fromUtf8("pushButton_135"));
+        pushButton_135->setMinimumSize(QSize(0, 30));
+
+        gridLayout->addWidget(pushButton_135, 8, 5, 1, 1);
+
+        pushButton_97 = new QPushButton(layoutWidget);
+        pushButton_97->setObjectName(QString::fromUtf8("pushButton_97"));
+        pushButton_97->setMinimumSize(QSize(0, 30));
+
+        gridLayout->addWidget(pushButton_97, 21, 6, 1, 1);
+
+        pushButton_136 = new QPushButton(layoutWidget);
+        pushButton_136->setObjectName(QString::fromUtf8("pushButton_136"));
+        pushButton_136->setMinimumSize(QSize(0, 30));
+
+        gridLayout->addWidget(pushButton_136, 19, 4, 1, 1);
+
         pushButton_29 = new QPushButton(centralWidget);
         pushButton_29->setObjectName(QString::fromUtf8("pushButton_29"));
         pushButton_29->setGeometry(QRect(10, 50, 131, 34));
@@ -1051,14 +1077,12 @@ public:
         pushButton_14->setText(QApplication::translate("MainWindow", "Laplacian", 0, QApplication::UnicodeUTF8));
         pushButton_56->setText(QApplication::translate("MainWindow", "\345\215\216\344\270\234\350\247\222\345\272\246", 0, QApplication::UnicodeUTF8));
         pushButton_45->setText(QApplication::translate("MainWindow", "\345\216\213\351\222\210\347\216\260\345\234\272", 0, QApplication::UnicodeUTF8));
-        pushButton_99->setText(QApplication::translate("MainWindow", "splitHSV", 0, QApplication::UnicodeUTF8));
+        pushButton_99->setText(QApplication::translate("MainWindow", "splitHSV\345\275\222\344\270\200\345\214\226", 0, QApplication::UnicodeUTF8));
         pushButton_12->setText(QApplication::translate("MainWindow", "\345\275\251\345\233\276", 0, QApplication::UnicodeUTF8));
         pushButton_95->setText(QApplication::translate("MainWindow", "\347\231\275\350\211\262\350\203\214\346\231\257\345\270\203\346\226\231", 0, QApplication::UnicodeUTF8));
-        pushButton_106->setText(QApplication::translate("MainWindow", "splitRGBVal", 0, QApplication::UnicodeUTF8));
         pushButton_63->setText(QApplication::translate("MainWindow", "C\346\250\241\346\235\277\346\265\213\350\257\225", 0, QApplication::UnicodeUTF8));
         pushButton_90->setText(QApplication::translate("MainWindow", "opencv300", 0, QApplication::UnicodeUTF8));
         pushButton_89->setText(QApplication::translate("MainWindow", "\346\214\257\346\214\272E\347\272\277_loop", 0, QApplication::UnicodeUTF8));
-        pushButton_107->setText(QApplication::translate("MainWindow", "splitRGB", 0, QApplication::UnicodeUTF8));
         pushButton_88->setText(QApplication::translate("MainWindow", "\346\214\257\346\214\272E\347\272\277QC", 0, QApplication::UnicodeUTF8));
         pushButton_109->setText(QApplication::translate("MainWindow", "\346\214\257\346\214\272D\347\272\277ZDK", 0, QApplication::UnicodeUTF8));
         pushButton_13->setText(QApplication::translate("MainWindow", "sobel", 0, QApplication::UnicodeUTF8));
@@ -1121,7 +1145,6 @@ public:
         pushButton_84->setText(QApplication::translate("MainWindow", "cpp\346\250\241\346\235\277\346\265\213\350\257\225", 0, QApplication::UnicodeUTF8));
         pushButton_40->setText(QApplication::translate("MainWindow", "\345\217\215\350\275\254\345\214\271\351\205\215>300", 0, QApplication::UnicodeUTF8));
         pushButton_60->setText(QApplication::translate("MainWindow", "-10", 0, QApplication::UnicodeUTF8));
-        pushButton_97->setText(QApplication::translate("MainWindow", "\351\227\264\351\232\231\346\243\200\346\265\213", 0, QApplication::UnicodeUTF8));
         pushButton_66->setText(QApplication::translate("MainWindow", "hid", 0, QApplication::UnicodeUTF8));
         pushButton_21->setText(QApplication::translate("MainWindow", "threshold", 0, QApplication::UnicodeUTF8));
         pushButton_65->setText(QApplication::translate("MainWindow", "\345\236\253\347\211\207\347\216\257\345\275\242\345\205\211", 0, QApplication::UnicodeUTF8));
@@ -1166,6 +1189,11 @@ public:
         pushButton_132->setText(QApplication::translate("MainWindow", "\345\234\260\346\247\233\346\243\200\346\265\213", 0, QApplication::UnicodeUTF8));
         pushButton_133->setText(QApplication::translate("MainWindow", "\346\214\257\346\214\272L\347\272\277", 0, QApplication::UnicodeUTF8));
         pushButton_134->setText(QApplication::translate("MainWindow", "\346\214\257\346\214\272M\347\272\277", 0, QApplication::UnicodeUTF8));
+        pushButton_106->setText(QApplication::translate("MainWindow", "splitRGBVal", 0, QApplication::UnicodeUTF8));
+        pushButton_107->setText(QApplication::translate("MainWindow", "splitRGB", 0, QApplication::UnicodeUTF8));
+        pushButton_135->setText(QApplication::translate("MainWindow", "HSV", 0, QApplication::UnicodeUTF8));
+        pushButton_97->setText(QApplication::translate("MainWindow", "\351\227\264\351\232\231\346\243\200\346\265\213", 0, QApplication::UnicodeUTF8));
+        pushButton_136->setText(QApplication::translate("MainWindow", "\351\233\252\351\276\231\345\234\206\345\255\224RGB", 0, QApplication::UnicodeUTF8));
         pushButton_29->setText(QApplication::translate("MainWindow", "loadImages", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         pushButton_62->setText(QApplication::translate("MainWindow", "next", 0, QApplication::UnicodeUTF8));

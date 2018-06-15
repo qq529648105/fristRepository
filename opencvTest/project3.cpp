@@ -1657,7 +1657,7 @@ void project3::loadShapePoint(int amount=30)
     //s_modelNum=s_model.size();
 
 }
-
+bool hsvFg;//雪一化标识
 //输入图像
 Mat src_hsv;
 //灰度值归一化
@@ -1693,9 +1693,15 @@ void callBackHSV(int, void*)
     dst_hsv = Mat::zeros(src_hsv.size(), CV_32FC3);
     //掩码
     Mat mask;
-    inRange(hsv_1, Scalar(hmin, smin / float(smin_Max), vmin / float(vmin_Max)), Scalar(hmax, smax / float(smax_Max), vmax / float(vmax_Max)), mask);
-    //inRange(hsv_1, Scalar(hmin, smin / float(smin_Max), vmin / float(vmin_Max)), Scalar(hmax, smax / float(smax_Max), vmax / float(vmax_Max)), mask);
-    //只保留
+    qDebug()<<"low"<<hmin<<smin<<vmin<<"high"<<hmax<<smax<<vmax;
+    if(hsvFg)
+        inRange(hsv_1, Scalar(hmin, smin / float(smin_Max), vmin / float(vmin_Max)), Scalar(hmax, smax / float(smax_Max), vmax / float(vmax_Max)), mask);
+    else
+    {
+        inRange(hsv_1, Scalar(hmin, smin, vmin), Scalar(hmax, smax , vmax ), mask);
+
+    }
+//只保留
 //    for (int r = 0; r < bgr_hsv.rows; r++)
 //    {
 //        for (int c = 0; c < bgr_hsv.cols; c++)
@@ -1707,7 +1713,10 @@ void callBackHSV(int, void*)
 //        }
 //    }
     //输出图像
+
     imshow(dstName, mask);
+
+
     //保存图像
 
 }
@@ -1758,7 +1767,11 @@ void project3::rgbPic(IplImage *img,bool isHsv)
          src_hsv=img2;
 
          //彩色图像的灰度值归一化
-         src_hsv.convertTo(bgr_hsv, CV_32FC3, 1.0 / 255, 0);
+         if(hsvFg)
+            src_hsv.convertTo(bgr_hsv, CV_32FC3, 1.0 / 255, 0);
+         else
+            src_hsv.copyTo(bgr_hsv);
+
          //颜色空间转换
          cvtColor(bgr_hsv, hsv_1, COLOR_BGR2HSV);
          //定义输出图像的显示窗口
@@ -1778,9 +1791,9 @@ void project3::rgbPic(IplImage *img,bool isHsv)
 
      cvNamedWindow("显示图片",1);
      cvShowImage("显示图片",img);
-     cvShowImage("通道1",imgChannel[0]);
-     cvShowImage("通道2",imgChannel[1]);
-     cvShowImage("通道3",imgChannel[2]);
+//     cvShowImage("通道1",imgChannel[0]);
+//     cvShowImage("通道2",imgChannel[1]);
+//     cvShowImage("通道3",imgChannel[2]);
 
 
 }
@@ -2576,9 +2589,9 @@ void project3::similarity()
 
 void project3::splitRGB(Mat &rgb)
 {
-    int b=0;//162;
-    int g=115;//188;
-    int r=208;//154;
+    int b=159;
+    int g=186;
+    int r=148;
 //qDebug()<<"aaa"<<rgb.at<Vec3b>(23,74)[0]<<rgb.at<Vec3b>(23,74)[1]<<rgb.at<Vec3b>(23,74)[2];
 Mat mask(rgb.rows,rgb.cols,CV_8UC1,Scalar(0));
     for(int i=0;i<rgb.rows;i++)
@@ -2586,7 +2599,7 @@ Mat mask(rgb.rows,rgb.cols,CV_8UC1,Scalar(0));
         for(int j=0;j<rgb.cols;j++)
         {
 
-            if(abs(rgb.at<Vec3b>(i,j)[0]-r)+ abs(rgb.at<Vec3b>(i,j)[1]-g)+ abs(rgb.at<Vec3b>(i,j)[2]-b)<50)
+            if(abs(rgb.at<Vec3b>(i,j)[0]-r)+ abs(rgb.at<Vec3b>(i,j)[1]-g)+ abs(rgb.at<Vec3b>(i,j)[2]-b)<30)
             {
                 rgb.at<Vec3b>(i,j)[0]=0;
                 rgb.at<Vec3b>(i,j)[1]=0;
